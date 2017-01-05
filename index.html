@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<link rel="stylesheet" href="css/fz.css">
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<div class="header"></div>
+		<div class="row">
+			<div class="col1">
+				<div class="mod1" id="">
+					<div class="tit font3">各地拦截、关注数比中数（累计）</div>
+					<div class="md1" id="Left_zhu"></div>
+					<table class="md2" id="Left_zhu_table_left" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					<table class="md3 " id="Left_zhu_table" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="mod2">
+					<div class="tit font3">总比中数日趋势</div>
+					<div class="md1" id="left_zhe"></div>
+				</div>
+				<div class="mod3">
+					<div class="md1">
+						<div class="tit font3">各类重点人员基数</div>
+						<div class="m1" id="left_bottom_left"></div>
+					</div>
+					<div class="md2">
+						<div class="tit font3">各地重点人员基数</div>
+						<div class="m1" id="left_bottom_right"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col2">
+				<div class="mod1">
+					<div class="bg_left"></div>
+					<div class="bg_right"></div>
+					<div class="md1">
+						<a href="#" onclick="changkou()"><span>常口</span></a>
+						<a href="#" onclick="zhankou()"><span>暂口</span></a>
+						<a href="#" onclick="nianfa()"><span>发案</span></a>
+						<a href="#" onclick="nianjie()"><span>接警</span></a>
+						<a href="#" onclick="changpo()"><span>破案</span></a>
+						<a href="#" onclick="niancai()"><span>强制措施数人数</span></a>
+					</div>
+					<div class="md2">
+						<div  class="tit font3">接案</div>
+						<div id="center_left" class="m1"></div>
+						<div id="center_center" class="m1"> </div>
+						<div id="center_right" class="m1"> </div>
+					</div>
+					<div class="md3" id="quyu">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td></td>
+								<td>鹿城区</td>
+								<td>瓯海区</td>
+								<td>龙湾区</td>
+								<td>洞头区</td>
+								<td>瑞安市</td>
+								<td>经济开发区</td>
+							</tr>
+							<tr>
+								<td>周预警</td>
+								<td><div style="background-color: #eb2424;"></div></td>
+								<td><div style="background-color: #448aca;"></div></td>
+								<td><div style="background-color: #738d2f;"></div></td>
+								<td><div style="background-color: #eb2424;"></div></td>
+								<td><div style="background-color: #738d2f;"></div></td>
+								<td><div style="background-color: #eb2424;"></div></td>
+							</tr>
+						</table>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td></td>
+								<td>乐清市</td>
+								<td>永嘉县</td>
+								<td>文成县</td>
+								<td>平阳县</td>
+								<td>苍南县</td>
+								<td>泰顺县</td>
+							</tr>
+							<tr>
+								<td>周预警</td>
+								<td><div style="background-color: #eb2424;"></div></td>
+								<td><div style="background-color: #448aca;"></div></td>
+								<td><div style="background-color: #738d2f;"></div></td>
+								<td><div style="background-color: #448aca;"></div></td>
+								<td><div style="background-color: #738d2f;"></div></td>
+								<td><div style="background-color: #eb2424;"></div></td>
+							</tr>
+						</table>
+					</div>
+					<div class="md4" id="center_right_ditu"></div>
+					<div class="wenzhoushi font1 size1">
+						<a href="#" onclick="tongji()" style="">
+							<span>温州市</span>
+							<br>
+							<span style="color: #82bde9">23</span>
+						</a>
+
+					</div>
+				</div>
+				<div class="mod2">
+					<div class="bg_left"></div>
+					<div class="bg_right"></div>
+					<div id="center_zhu" class="md1"></div>
+				</div>
+			</div>
+			<div class="col3">
+				<div class="mod1">
+					<div class="font1 size1">被省查获</div>
+					<div class="font2 size2">0</div>
+					<div class="font1 size1">失控人员</div>
+					<div class="font2 size2">12</div>
+				</div>
+				<div class="mod2">
+					<div class="tit"></div>
+					<div class="md1">
+						<div class="tit font3">各类人员日预警</div>
+						<div class="m1" id="right_center_left"></div>
+					</div>
+					<div class="md2">
+						<div class="tit font3">各类人员累计预警</div>
+						<div class="m1" id="right_center_right"></div>
+					</div>
+				</div>
+				<div class="mod3">
+					<div class="md1 font3">涉疆关注人员活动数（累计）</div>
+					<div class="md2">
+						<span class="font1 size3">涉疆基数</span>
+						<span class="font2 size4">1</span>
+						<span class="font1 size3">本日新增</span>
+						<span class="font2 size4">5</span>
+						<span class="font1 size3">敏感国家人员</span>
+						<span class="font2 size4">0</span>
+					</div>
+				</div>
+				<div class="mod4">
+					<div class="md1">
+						<div class="tit font3">各地累计比中</div>
+						<div class="m1" id="right_bing_one"></div>
+					</div>
+					<div class="md2">
+						<div class="tit font3">活跃群体累计比中</div>
+						<div class="m1" id="right_bing_two"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/G20.js"></script>
+	</body>
+</html>
